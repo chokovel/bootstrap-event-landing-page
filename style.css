@@ -1,0 +1,324 @@
+/* CSS SELECTOR */
+
+/* UNIVERSAL SELECTOR */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* Type or Element Selector */
+/* img {
+  border: solid 2px red;
+}
+
+p {
+  padding-top: 15px;
+}
+
+div {
+  padding-top: 30px;
+} */
+
+/* Class Selector */
+
+.spring-collection {
+  padding: 20px;
+  list-style-type: none;
+}
+
+ul + p{
+      color: yellow;
+}
+
+/* div p, h1{
+    background-color: brown;
+} */
+
+/* ID Selector */
+
+#top{
+  text-align: center;
+  background-color: rgb(64, 64, 169);
+  padding-bottom: 50px;
+}
+
+#top h1 {
+  padding-bottom: 30px;
+}
+
+header p{
+  padding: 0px 40px;
+}
+
+/* #spring {
+  width: 80%;
+  padding-top: 20px;
+  margin: 0 auto;
+  text-align: center;
+} */
+
+/* #summer {
+  border: solid 2px blue;
+  border-radius: 10px;
+  margin: 35px;
+} */
+
+/* combination selector */
+/* 1. Descendant combination selector */
+div p {
+  color: blue;
+}
+
+/* child combination selector */
+/* div > p {
+  color: greenyellow;
+  font-weight: 600px;
+  font-size: 32px;
+}
+div > h1 {
+  color: darkcyan;
+  font-weight: 600px;
+  font-size: 32px;
+}
+
+article > h1 {
+  color: blueviolet;
+} */
+
+/* adjacent sibling selector  */
+
+img + p {
+  padding: 30px;
+  color: brown;
+  font-style: italic;
+  font-weight: bolder;
+}
+
+/* general sibling selector */
+img ~ p {
+  color: darkblue;
+  font-style: italic;
+  font-weight: bolder;
+}
+
+/* Grouping Selector */
+/* h1 {
+  font-size: 60px;
+  color: gray;
+}
+p {
+  font-size: 60px;
+}
+li {
+  font-size: 60px;
+}
+
+h1,p,li {
+  font-size: 40px;
+  color: gray;
+} */
+
+/* Attribute Selectors [] */
+
+[type]{
+  color:blue
+}
+
+[type="email"]{
+  color:green
+}
+
+/* [type="text"]{
+  font-size: 20px;
+} */
+
+input[type="text"]{
+  font-size: 20px;
+}
+
+[placeholder]{
+  background-color: aqua;
+}
+
+[placeholder="Different placeholder"] {
+  background-color: blue;
+}
+
+/* input[type="text"] {
+  color: green;
+} */
+
+/* div[data-role="admin"] {
+  background-color: blue;
+} */
+
+/* [data-role] {
+  padding: 30px;
+} */
+
+/* [data-role="user"] {
+  background-color: green;
+} */
+
+/* must contain or with space ~ */
+/* [class~="special"] {
+  color: red;
+} */
+
+/* hyphen or |= */
+/* p[lang|="en"] {
+  color: blue;
+} */
+
+/* begins with ^= */
+/* [id^="button"] {
+  color: chartreuse;
+} */
+
+/* ends with $= */
+/* [src$=".jpg"] {
+  border: 2px ridge red;
+  border-radius: 30px;
+} */
+
+/* Specific word in string (*=) */
+[title*="special"]{
+    color: darksalmon;
+}
+
+/* Pseudo-class selectors */
+/* a:link {
+  color: red;
+}
+
+a:visited {
+  color: darkgoldenrod;
+}
+
+a:hover {
+  background-color: lightcoral;
+}
+
+a:active {
+  color: chartreuse;
+}
+
+input:focus {
+  background-color: cadetblue;
+} */
+
+/* First and Last child */
+/* div.first p:first-child {
+  font-weight: bold;
+  color: blue;
+}
+.first p:last-child {
+  font-style: italic;
+  color: green;
+} */
+
+/* nth-child */
+
+/* li:nth-child(odd) {
+  color: orange;
+}
+li:nth-child(2) {
+  color: red;
+}
+
+p:nth-last-child(2) {
+  color: yellow;
+} */
+
+/* nth-type-of */
+
+/* .nthoftype p:nth-last-of-type(2) {
+  color: aqua;
+} */
+
+/* Pseudo-element selector */
+/* div:not(.highlight) {
+  background-color: gray;
+} */
+
+/* disabled */
+/* input:disabled {
+  background-color: lightblue;
+} */
+
+/* checkbox and radio button */
+/* input[type="checkbox"]:checked + label {
+  background: yellow;
+}
+input[type="radio"]:checked + label {
+  background-color: yellow;
+} */
+
+/* tooltip */
+.tooltip p {
+  display: none;
+  background-color: blue;
+}
+
+div.tooltip:hover p {
+  display: block;
+  transition-delay: 3s;
+}
+
+/* ::before and ::after */
+/* p::before {
+  content: "Note: ";
+  font-weight: bold;
+  color: red;
+}
+p::after {
+  content: " [end]";
+  font-style: italic;
+  color: blue;
+}
+.info::before {
+  content: "ℹ️ ";
+  margin-right: 5px;
+}
+.warning::after {
+  content: " ⚠️";
+  margin-left: 5px;
+} */
+
+/* clearfix example */
+/* .clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.box {
+  float: left;
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+  background-color: lightblue;
+} */
+
+/* list marker */
+/* ::marker{
+    color: blue;
+}
+
+::selection{
+    color: brown;
+    background-color: blue;
+}
+
+p::first-letter{
+    font-size: 42px;
+    color: blue;
+}
+
+h2::first-line{
+    font-size: medium;
+    font-weight: 500;
+    font-family: cursive;
+} */

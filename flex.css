@@ -1,0 +1,32 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.item {
+  background-color: #830707;
+  color: aliceblue;
+  width: 100px;
+  margin: 10px;
+  text-align: center;
+  line-height: 75px;
+  font-size: 30px;
+}
+
+.flex-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap:34px;
+}
+.item1{
+    flex-grow: 1;
+}
+.item2{
+    flex-grow: 2;
+}
+.item3{
+    flex-grow: 1;
+}
